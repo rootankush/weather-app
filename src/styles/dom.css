@@ -1,0 +1,35 @@
+.mainCard {
+	display: grid;
+	background-color: #291250;
+	border-radius: 1rem;
+	margin: 0 0.5rem 0 0;
+	filter: opacity(80%);
+	text-align: center;
+}
+
+.locationText {
+	font-size: 2.7rem;
+	margin: 3rem 0 0 0;
+}
+
+.tempText {
+	font-size: 5rem;
+}
+
+.descriptionTex {
+	font-size: 2rem;
+}
+
+.secondaryCard {
+	display: grid;
+	border-radius: 1rem;
+	margin: 0 0 0 0.5rem;
+}
+
+.card {
+	background-color: #291250;
+	border-radius: 1rem;
+	border: 1px solid black;
+	margin-bottom: 0.5rem;
+	filter: opacity(80%);
+}
