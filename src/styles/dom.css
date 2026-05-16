@@ -5,6 +5,8 @@
 	margin: 0 0.5rem 0 0;
 	filter: opacity(80%);
 	text-align: center;
+	color: var(--ui-text-color);
+	padding: 2rem;
 }
 
 .locationText {
@@ -16,8 +18,8 @@
 	font-size: 5rem;
 }
 
-.descriptionTex {
-	font-size: 2rem;
+.descriptionText {
+	font-size: 1.2rem;
 }
 
 .secondaryCard {
@@ -27,9 +29,14 @@
 }
 
 .card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2.1rem;
+	max-height: 200px;
 	background-color: #291250;
 	border-radius: 1rem;
-	border: 1px solid black;
 	margin-bottom: 0.5rem;
 	filter: opacity(80%);
+	color: var(--ui-text-color);
 }

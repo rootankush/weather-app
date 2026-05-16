@@ -1,5 +1,5 @@
 @font-face {
-	font-family: "mainFont";
+	font-family: "headerFont";
 	src: url(./assets/retrobyte.medium.otf);
 }
 
@@ -9,11 +9,10 @@
 }
 
 :root {
-	/* --main-bg-color: #222831; */
 	--main-bg-color: #000000;
 	--main-text-color: #9929ea;
-	/* --main-text-color: #00adb5; */
 
+	--ui-border-color: purple;
 	--ui-bg-color: #393e46;
 	--ui-text-color: #eeeeee;
 }
@@ -30,7 +29,7 @@ body {
 }
 
 header {
-	font-family: "mainFont";
+	font-family: "headerFont";
 	font-size: 3rem;
 	text-align: center;
 	width: 60vw;
@@ -59,18 +58,25 @@ input {
 	cursor: pointer;
 }
 
+input:active {
+	border: 1px solid red;
+}
+
 button {
 	font-size: 1.5rem;
 	background-color: var(--main-bg-color);
 	border: 1px solid var(--main-text-color);
+	border-bottom: 4px solid var(--ui-border-color);
+	border-right: 4px solid var(--ui-border-color);
 	border-radius: 0.2rem;
 	padding: 0.5rem 1rem;
 	color: var(--main-text-color);
 	cursor: pointer;
 }
 
-button:hover {
+button:active {
 	background-color: var(--main-text-color);
 	color: var(--main-bg-color);
 	cursor: pointer;
+	transform: translateY(2px);
 }

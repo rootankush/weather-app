@@ -1,19 +1,22 @@
 import "../styles/dom.css";
-import { loadData } from "./logic";
 
-export const loadPage = async () => {
+export const loadPage = (weather) => {
   const container = document.getElementById("main-content");
   const mainCard = document.createElement("div");
   const locationText = document.createElement("p");
   const tempText = document.createElement("p");
   const descriptionText = document.createElement("p");
   const secondaryCard = document.createElement("div");
+  const spanError = document.getElementById("error");
   const sc1 = document.createElement("div");
   const sc2 = document.createElement("div");
   const sc3 = document.createElement("div");
   const sc4 = document.createElement("div");
-  const submitBtn = document.getElementById("submitBtn");
-  const weather = await loadData();
+
+  if (!weather) return;
+
+  container.textContent = "";
+  spanError.textContent = "";
 
   mainCard.classList.add("mainCard");
   locationText.classList.add("locationText");
@@ -25,7 +28,11 @@ export const loadPage = async () => {
   sc3.classList.add("card");
   sc4.classList.add("card");
 
-  sc1.textContent = `${weather.humidity}`;
+  sc1.textContent = `[~] Humidity: ${weather.humidity}`;
+  sc2.textContent = `Feels Like: ${weather.feelsLike}`;
+  sc3.innerText = `===> Wind Speed: ${weather.windSpeed} \n Wind Direction: ${weather.windDir}`;
+  sc4.textContent = `[*] Rain Chance: ${weather.rainChance}%`;
+
   locationText.textContent = `${weather.address}`;
   tempText.textContent = `${weather.fahrenheit}°F`;
   descriptionText.textContent = `${weather.description}`;
@@ -41,6 +48,4 @@ export const loadPage = async () => {
 
   container.appendChild(mainCard);
   container.appendChild(secondaryCard);
-
-  submitBtn.addEventListener("click", loadData);
 };
