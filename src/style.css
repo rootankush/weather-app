@@ -9,12 +9,12 @@
 }
 
 :root {
-	--main-bg-color: #000000;
-	--main-text-color: #9929ea;
+	--main-bg-color: hsl(0 0% 0%);
+	--main-text-color: hsl(275 82% 54%);
 
 	--ui-border-color: purple;
-	--ui-bg-color: #393e46;
-	--ui-text-color: #eeeeee;
+	--ui-bg-color: hsl(217 10% 25%);
+	--ui-text-color: hsl(0 0% 93%);
 }
 
 body {
