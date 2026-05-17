@@ -1,7 +1,9 @@
 .mainCard {
 	display: grid;
-	background-color: #291250;
-	border-radius: 1rem;
+	background-color: #180635;
+	border-bottom: 4px solid var(--ui-border-color);
+	border-right: 4px solid var(--ui-border-color);
+	border-radius: 8px;
 	margin: 0 0.5rem 0 0;
 	filter: opacity(80%);
 	text-align: center;
@@ -34,8 +36,10 @@
 	align-items: center;
 	font-size: 2.1rem;
 	max-height: 200px;
-	background-color: #291250;
-	border-radius: 1rem;
+	background-color: #180635;
+	border-bottom: 4px solid var(--ui-border-color);
+	border-right: 4px solid var(--ui-border-color);
+	border-radius: 8px;
 	margin-bottom: 0.5rem;
 	filter: opacity(80%);
 	color: var(--ui-text-color);
